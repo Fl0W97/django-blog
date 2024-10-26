@@ -1,0 +1,101 @@
+gitpod /workspace/django-blog (main) $ heroku logs --tail --app myblog1
+2024-10-22T20:50:03.469338+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-10-22T20:50:03.469339+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.12/importlib/__init__.py", line 90, in import_module
+2024-10-22T20:50:03.469340+00:00 app[web.1]: return _bootstrap._gcd_import(name[level:], package, level)
+2024-10-22T20:50:03.469342+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-10-22T20:50:03.469343+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+2024-10-22T20:50:03.469343+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+2024-10-22T20:50:03.469343+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+2024-10-22T20:50:03.469343+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+2024-10-22T20:50:03.469343+00:00 app[web.1]: File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+2024-10-22T20:50:03.469344+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+2024-10-22T20:50:03.469344+00:00 app[web.1]: File "/app/codestar/wsgi.py", line 16, in <module>
+2024-10-22T20:50:03.469344+00:00 app[web.1]: application = get_wsgi_application()
+2024-10-22T20:50:03.469344+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^
+2024-10-22T20:50:03.469344+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.12/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+2024-10-22T20:50:03.469344+00:00 app[web.1]: django.setup(set_prefix=False)
+2024-10-22T20:50:03.469345+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.12/site-packages/django/__init__.py", line 19, in setup
+2024-10-22T20:50:03.469345+00:00 app[web.1]: configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+2024-10-22T20:50:03.469345+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^
+2024-10-22T20:50:03.469345+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.12/site-packages/django/conf/__init__.py", line 102, in __getattr__
+2024-10-22T20:50:03.469346+00:00 app[web.1]: self._setup(name)
+2024-10-22T20:50:03.469346+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.12/site-packages/django/conf/__init__.py", line 89, in _setup
+2024-10-22T20:50:03.469346+00:00 app[web.1]: self._wrapped = Settings(settings_module)
+2024-10-22T20:50:03.469346+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-10-22T20:50:03.469347+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.12/site-packages/django/conf/__init__.py", line 217, in __init__
+2024-10-22T20:50:03.469347+00:00 app[web.1]: mod = importlib.import_module(self.SETTINGS_MODULE)
+2024-10-22T20:50:03.469348+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-10-22T20:50:03.469348+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.12/importlib/__init__.py", line 90, in import_module
+2024-10-22T20:50:03.469348+00:00 app[web.1]: return _bootstrap._gcd_import(name[level:], package, level)
+2024-10-22T20:50:03.469348+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-10-22T20:50:03.469348+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+2024-10-22T20:50:03.469349+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+2024-10-22T20:50:03.469349+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+2024-10-22T20:50:03.469349+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+2024-10-22T20:50:03.469349+00:00 app[web.1]: File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+2024-10-22T20:50:03.469349+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+2024-10-22T20:50:03.469350+00:00 app[web.1]: File "/app/codestar/settings.py", line 91, in <module>
+2024-10-22T20:50:03.469350+00:00 app[web.1]: 'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+2024-10-22T20:50:03.469350+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-10-22T20:50:03.469350+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.12/site-packages/dj_database_url.py", line 80, in parse
+2024-10-22T20:50:03.469350+00:00 app[web.1]: if '?' in path and not url.query:
+2024-10-22T20:50:03.469351+00:00 app[web.1]: ^^^^^^^^^^^
+2024-10-22T20:50:03.469351+00:00 app[web.1]: TypeError: a bytes-like object is required, not 'str'
+2024-10-22T20:50:03.469408+00:00 app[web.1]: [2024-10-22 20:50:03 +0000] [10] [INFO] Worker exiting (pid: 10)
+2024-10-22T20:50:03.498548+00:00 app[web.1]: [2024-10-22 20:50:03 +0000] [2] [WARNING] Worker with pid 10 was terminated due to signal 15
+2024-10-22T20:50:03.595790+00:00 app[web.1]: [2024-10-22 20:50:03 +0000] [2] [INFO] Shutting down: Master
+2024-10-22T20:50:03.595820+00:00 app[web.1]: [2024-10-22 20:50:03 +0000] [2] [INFO] Reason: Worker failed to boot.
+2024-10-22T20:50:03.661950+00:00 heroku[web.1]: Process exited with status 3
+2024-10-22T20:50:03.685828+00:00 heroku[web.1]: State changed from starting to crashed
+2024-10-22T20:50:06.114224+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=myblog1-cc6a7a686fee.herokuapp.com request_id=ede15d62-2297-47ef-9937-4fc93cb7e1e8 fwd="83.171.162.243" dyno= connect= service= status=503 bytes= protocol=https
+2024-10-22T20:50:20.882955+00:00 app[api]: Scaled to web@0:Basic by user florian.guldner@googlemail.com
+2024-10-22T20:50:21.234847+00:00 heroku[web.1]: State changed from crashed to down
+2024-10-23T15:59:09.726901+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=myblog1-cc6a7a686fee.herokuapp.com request_id=037cb79e-145d-46ab-a114-6e9099c3e0e2 fwd="83.171.162.243" dyno= connect= service= status=503 bytes= protocol=https
+2024-10-24T16:37:42.000000+00:00 app[api]: Build started by user florian.guldner@googlemail.com
+2024-10-24T16:37:54.554714+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=myblog1-cc6a7a686fee.herokuapp.com request_id=d94518cc-f85f-4eed-908d-b3266600e023 fwd="178.24.249.26" dyno= connect= service= status=503 bytes= protocol=https
+2024-10-24T16:38:02.183955+00:00 app[api]: Deploy 1ae583a1 by user florian.guldner@googlemail.com
+2024-10-24T16:38:02.183955+00:00 app[api]: Release v10 created by user florian.guldner@googlemail.com
+2024-10-24T16:38:06.000000+00:00 app[api]: Build succeeded
+2024-10-24T16:38:23.575472+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=myblog1-cc6a7a686fee.herokuapp.com request_id=e0bf4bec-715f-4611-977e-1a2cd9659eaa fwd="178.24.249.26" dyno= connect= service= status=503 bytes= protocol=https
+2024-10-24T17:02:33.330076+00:00 app[api]: Set SECRET_KEY config vars by user florian.guldner@googlemail.com
+2024-10-24T17:02:33.330076+00:00 app[api]: Release v11 created by user florian.guldner@googlemail.com
+2024-10-24T17:05:20.000000+00:00 app[api]: Build started by user florian.guldner@googlemail.com
+2024-10-24T17:05:39.199367+00:00 app[api]: Release v12 created by user florian.guldner@googlemail.com
+2024-10-24T17:05:39.199367+00:00 app[api]: Deploy 877cdc55 by user florian.guldner@googlemail.com
+2024-10-24T17:05:43.000000+00:00 app[api]: Build succeeded
+2024-10-24T17:05:47.508777+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=myblog1-cc6a7a686fee.herokuapp.com request_id=34a76fab-33bf-4185-90b7-65c7adaef58c fwd="178.24.249.26" dyno= connect= service= status=503 bytes= protocol=https
+2024-10-25T17:40:41.400323+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=myblog1-cc6a7a686fee.herokuapp.com request_id=64e10551-3127-430f-8bf7-3725bfc24a4c fwd="178.24.249.14" dyno= connect= service= status=503 bytes= protocol=https
+2024-10-25T17:40:49.468426+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=myblog1-cc6a7a686fee.herokuapp.com request_id=65b9202a-d37f-4c92-8211-4402c913eb10 fwd="178.24.249.14" dyno= connect= service= status=503 bytes= protocol=https
+2024-10-25T17:41:24.595050+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=HEAD path="/" host=myblog1-cc6a7a686fee.herokuapp.com request_id=045100ad-9deb-4f9b-bd49-2cdc6027c22f fwd="34.197.76.213" dyno= connect= service= status=503 bytes= protocol=https
+2024-10-25T17:41:25.148147+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=HEAD path="/" host=myblog1-cc6a7a686fee.herokuapp.com request_id=241ee9b3-7b9a-4496-a58a-c64229ac69a9 fwd="34.197.76.213" dyno= connect= service= status=503 bytes= protocol=https
+2024-10-25T18:43:10.000000+00:00 app[api]: Build started by user florian.guldner@googlemail.com
+2024-10-25T18:43:31.921738+00:00 app[api]: Deploy 89ce0026 by user florian.guldner@googlemail.com
+2024-10-25T18:43:31.921738+00:00 app[api]: Release v13 created by user florian.guldner@googlemail.com
+2024-10-25T18:43:41.000000+00:00 app[api]: Build succeeded
+2024-10-25T18:48:15.313285+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=myblog1-cc6a7a686fee.herokuapp.com request_id=1eb6327a-45b0-4f7b-b382-bc70bd8b5934 fwd="178.24.249.14" dyno= connect= service= status=503 bytes= protocol=https
+2024-10-25T18:48:21.709857+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/admin" host=myblog1-cc6a7a686fee.herokuapp.com request_id=24016a83-4e1a-4b9c-bd47-4aa29b3fd3c4 fwd="178.24.249.14" dyno= connect= service= status=503 bytes= protocol=https
+2024-10-25T19:12:26.825665+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/admin" host=myblog1-cc6a7a686fee.herokuapp.com request_id=778a1f5c-aa96-4f91-bd1a-68a74d4985d9 fwd="178.24.249.14" dyno= connect= service= status=503 bytes= protocol=https
+2024-10-26T10:02:49.000000+00:00 app[api]: Build started by user florian.guldner@googlemail.com
+2024-10-26T10:02:56.123239+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/admin" host=myblog1-cc6a7a686fee.herokuapp.com request_id=292b1b1e-ca26-41af-acb0-f1ec3a4261b7 fwd="178.24.249.81" dyno= connect= service= status=503 bytes= protocol=https
+2024-10-26T10:02:58.047281+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/admin" host=myblog1-cc6a7a686fee.herokuapp.com request_id=144a5c86-5542-47a5-8a6b-e78bd1e24ab2 fwd="178.24.249.81" dyno= connect= service= status=503 bytes= protocol=https
+2024-10-26T10:03:00.790998+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=myblog1-cc6a7a686fee.herokuapp.com request_id=88152852-a459-4586-ade4-33af54db51ea fwd="178.24.249.81" dyno= connect= service= status=503 bytes= protocol=https
+2024-10-26T10:03:07.403919+00:00 app[api]: Release v14 created by user florian.guldner@googlemail.com
+2024-10-26T10:03:07.403919+00:00 app[api]: Deploy c08a7072 by user florian.guldner@googlemail.com
+2024-10-26T10:03:15.000000+00:00 app[api]: Build succeeded
+2024-10-26T10:10:23.188293+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=HEAD path="/" host=myblog1-cc6a7a686fee.herokuapp.com request_id=70cfc625-7554-407b-b8f0-d23e8e95c85f fwd="34.197.76.213" dyno= connect= service= status=503 bytes= protocol=https
+2024-10-26T10:10:23.739008+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=HEAD path="/" host=myblog1-cc6a7a686fee.herokuapp.com request_id=66a6ed72-6dd5-4abb-b47c-b440a04c9bf9 fwd="34.197.76.213" dyno= connect= service= status=503 bytes= protocol=https
+2024-10-26T10:11:32.789089+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=myblog1-cc6a7a686fee.herokuapp.com request_id=7149d9cb-296b-4859-b208-974e13d6acc8 fwd="81.77.107.122" dyno= connect= service= status=503 bytes= protocol=https
+2024-10-26T10:11:33.055423+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=myblog1-cc6a7a686fee.herokuapp.com request_id=1b782490-7ca6-46df-ad84-09f9da19887a fwd="81.77.107.122" dyno= connect= service= status=503 bytes= protocol=https
+2024-10-26T10:27:03.000000+00:00 app[api]: Build started by user florian.guldner@googlemail.com
+2024-10-26T10:27:31.719555+00:00 app[api]: Release v15 created by user florian.guldner@googlemail.com
+2024-10-26T10:27:31.719555+00:00 app[api]: Deploy 24b0a056 by user florian.guldner@googlemail.com
+2024-10-26T10:27:36.000000+00:00 app[api]: Build succeeded
+2024-10-26T10:27:42.391459+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=myblog1-cc6a7a686fee.herokuapp.com request_id=6a8a5ce8-bd2f-42c3-952d-ed919e03bb7e fwd="178.24.249.81" dyno= connect= service= status=503 bytes= protocol=https
+2024-10-26T10:29:34.997285+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=myblog1-cc6a7a686fee.herokuapp.com request_id=afa8347e-db9a-4604-b3d7-ff9b18f91eea fwd="178.24.249.81" dyno= connect= service= status=503 bytes= protocol=https
+2024-10-26T10:35:30.000000+00:00 app[api]: Build started by user florian.guldner@googlemail.com
+2024-10-26T10:36:07.713726+00:00 app[api]: Deploy c8623a86 by user florian.guldner@googlemail.com
+2024-10-26T10:36:07.713726+00:00 app[api]: Release v16 created by user florian.guldner@googlemail.com
+2024-10-26T10:36:12.000000+00:00 app[api]: Build succeeded
+2024-10-26T10:36:22.501116+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=myblog1-cc6a7a686fee.herokuapp.com request_id=1dc0cbd1-1cf6-41ba-8682-f7a08013efb7 fwd="178.24.249.81" dyno= connect= service= status=503 bytes= protocol=https
+2024-10-26T10:37:49.702041+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=myblog1-cc6a7a686fee.herokuapp.com request_id=d6b7d561-e9b7-4546-b3e3-9c28fb8bebfe fwd="178.24.249.81" dyno= connect= service= status=503 bytes= protocol=https
+2024-10-26T10:43:05.220354+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=myblog1-cc6a7a686fee.herokuapp.com request_id=5f485dd2-ff4c-48bd-aa5d-19f62c169c6e fwd="178.24.249.81" dyno= connect= service= status=503 bytes= protocol=https
